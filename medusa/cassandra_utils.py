@@ -194,6 +194,7 @@ class CqlSession(object):
 
         return {
             socket.gethostbyaddr(host.address)[0]: {
+                'dc': host.datacenter,
                 'tokens': tokens,
                 'is_up': host.is_up
             }
